@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>MY MOTIVATIONAL QUOTE</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="poster">
+     <img class="motivational-img" src="./assets/images/daenerys.jpeg" alt="image" />
+     <h1>WHO YOU ARE</h1>
+     <p>You are the reflection of your thought.</p>
+     <h2>-Charles Douglas-</h2>
+    </div>
+  </body>
+
+</html>
