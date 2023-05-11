@@ -1,27 +1,92 @@
-body
-{
-    background-color: black;
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.main {
+  flex: 1;
 }
 h1{
-    text-transform: uppercase;
-    font: size 3rem;
-    text-align: center;
+  font-size: 5rem
 }
-.poster{
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 100px;
-    color: aliceblue;
-    font-family:"Libre Baskerville", serif;
-    text-align: center;
-}
-.motivational-img{
-    width: 100%;
-   border: 3px solid greenyellow;
-}
-h2{
-    text-shadow: 10cm;
-    text-align: center;
-    text-decoration-color: blue;
-}
+
+.icon{
+  font-size: 40px;
+  font-family:crossorigin;
+  color:whitesmoke;
   
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+}
+.card{
+  width: 45%;
+}
+.tile-image{
+  float: left;
+  height: 200px;
+  margin-right: 20px;
+}
+.left {
+  float: left;
+
+}
+.right {
+  float: right;
+}
+.Creative{
+  color:greenyellow;
+}
+body {
+  background-color: aquamarine;
+}
+
+@media (min-width: 319px) and (max-width: 480px) {
+  body {
+    background-color: lightsalmon;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  body {
+    background-color: powderblue;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  body {
+    background-color: limegreen;
+  }
+}
+
+@media (min-width: 1601px) {
+  body {
+    background-color: seagreen;
+  }
+}
+@media (max-width:600px){
+  .icon{
+    width: 100px;
+  }
+  h1 {
+    font-size :4.5rem;
+    text-align: center;
+  }
+  .card{
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+    text-align: justify;
+  }
+  .card img{
+    margin-bottom: 20px;
+    display: inline;
+    width:100%;
+    object-fit: cover;
+  }
+}
