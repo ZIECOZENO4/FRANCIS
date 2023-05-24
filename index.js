@@ -1,39 +1,97 @@
-alert("Hello world you are welcomed to ZENODICE GAME.")
-var username = prompt("what is your name player 1");
-var username1 = prompt("What is your name player 2")
+var randomNumber = document.querySelectorAll(".drum");
 
+for (let i = 0; i < randomNumber.length; i++) {
+   document.querySelectorAll(".drum")[i].addEventListener("click",function() { 
 
-var randomNumber1 = Math.floor(Math.random() * 6 ) + 1;
+      var buttonInnerHTML = this.innerHTML
+makesound(buttonInnerHTML);
+timeAnimation(buttonInnerHTML);
+   });
 
-var randimDiceImage = "dice" + randomNumber1 + ".png";
-
-var randomImageSource = "./images/" + randimDiceImage;
-
-var image1 = document.querySelectorAll("img")[0];
- 
-image1.setAttribute("src", randomImageSource);
-
-
-
-var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
-
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
-
-
-
-
-if (randomNumber1 > randomNumber2) {
-    document.querySelector("h1").innerHTML = "🏆WON🥇...Player 1 wins🎮.";
-    alert("Nice game by " + username );
-}else if (randomNumber2 > randomNumber1) {
-    document.querySelector("h1").innerHTML = "🏆WON🥇...Player 2 wins🎮.";
-    alert("Nice game by " + username1);
-} else {
-    document.querySelector("h1").innerHTML = "DRAW..... Game replay🎮.";
 }
 
+document.addEventListener("keypress",function (event) {
+   makesound(event.key);
+   timeAnimation(event.key)
+});
 
 
 
-alert(" Refresh me and keep playing.");
+
+
+
+
+
+function makesound(key) {
+ 
+   switch (key) {
+      case "z":
+       var crash = new Audio("sounds/crash.mp3");
+       crash.play();
+         break;
+         case "i":
+            var kickbass = new Audio("sounds/kick-bass.mp3");
+           kickbass.play();
+           break;
+           case "e":
+            var snare = new Audio("sounds/snare.mp3");
+            snare.play();
+            break;
+            case "c":
+               var tom1 = new Audio("sounds/tom-1.mp3");
+               tom1.play();
+               break;
+                 case "o":
+               var tom2 = new Audio("sounds/tom-2.mp3");
+               tom2.play();
+               break;
+               case "t":
+                  var tom3 = new Audio("sounds/tom-3.mp3");
+                  tom3.play();
+                  break; 
+                   case "m":
+                  var tom4 = new Audio("sounds/tom-4.mp3");
+                  tom4.play();
+                  break;
+
+      default: console.log(button.innerHTML);
+         break;
+}
+  
+}
+function timeAnimation(currentkey) {
+ var activeButton =  document.querySelector("."+currentkey);
+ activeButton.classList.add("pressed");
+
+ setTimeout(function() {
+   activeButton.classList.remove("pressed")
+ }, 200);
+
+   
+}
+
+ 
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
